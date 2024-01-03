@@ -1,10 +1,10 @@
-package com.securex.springsecuritybasic;
+package com.securex.springsecurityDemo;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class SpringsecuritybasicApplicationTests {
+class SpringsecurityDemoApplicationTests {
 
 	@Test
 	void contextLoads() {
