@@ -34,12 +34,12 @@ public class SecurityConfig {
 
 
     /*
-    * USing JDBC Connectivity
+    * USing JDBC Connectivity, default JDBC
     * */
-    @Bean
-    public UserDetailsService userDetailsService(DataSource dataSource){
-        return new JdbcUserDetailsManager(dataSource);
-    }
+//    @Bean
+//    public UserDetailsService userDetailsService(DataSource dataSource){
+//        return new JdbcUserDetailsManager(dataSource);
+//    }
 
 
     /*
