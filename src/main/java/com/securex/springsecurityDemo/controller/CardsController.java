@@ -1,13 +1,25 @@
 package com.securex.springsecurityDemo.controller;
 
+import com.securex.springsecurityDemo.entities.Cards;
+import com.securex.springsecurityDemo.repository.CardsRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.List;
 
 
 @RestController
 public class CardsController {
+    @Autowired
+    CardsRepository cardsRepository;
     @GetMapping("/myCards")
-    public String getCardsDetails(){
-        return "Showing the Cards Details from the DB!!";
+    public List<Cards> getCardsDetails(@RequestParam int id){
+        List<Cards> cards = cardsRepository.findByCustomerId(id);
+        if(cards != null){
+            return cards;
+        }
+        return null;
     }
 }
